@@ -1,25 +1,138 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ccK-HS-QWw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="jlF-z5-dfe">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kq0-YX-AFI" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="HVn-HX-GGs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pmc-xU-UpE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="guY-AD-DsA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="cxZ-w3-PEt"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vak-8E-QCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="598" y="1203"/>
+        </scene>
+        <!--DragDrawing-->
+        <scene sceneID="roJ-8o-mtS">
+            <objects>
+                <viewController id="gLR-Hs-1kS" userLabel="DragDrawing" customClass="DragDrawingViewController" customModule="pocApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zA1-XC-UsW"/>
+                        <viewControllerLayoutGuide type="bottom" id="1b1-mP-jSl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bge-Ai-lD5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgA-Pf-0ug">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="320"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="C73-if-Y1W"/>
+                                    <constraint firstAttribute="width" constant="240" id="vSR-YZ-NsW"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9a2-fe-WXi" appends="YES" id="cPW-Wt-tCp"/>
+                                    <outletCollection property="gestureRecognizers" destination="MT0-HW-Vwf" appends="YES" id="dVB-bi-FeM"/>
+                                    <outletCollection property="gestureRecognizers" destination="6Qg-8b-rwZ" appends="YES" id="sja-rq-Cof"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4S-Ur-6k3">
+                                <rect key="frame" x="523" y="35" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animate:" destination="gLR-Hs-1kS" eventType="touchUpInside" id="Dcx-gj-aqu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFZ-d3-giD">
+                                <rect key="frame" x="535" y="65" width="45" height="30"/>
+                                <state key="normal" title="Rotate"/>
+                                <connections>
+                                    <action selector="rotate:" destination="gLR-Hs-1kS" eventType="touchUpInside" id="a0f-MU-ZRy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISa-xq-29n">
+                                <rect key="frame" x="540" y="95" width="40" height="30"/>
+                                <state key="normal" title="Zoom"/>
+                                <connections>
+                                    <action selector="zoom:" destination="gLR-Hs-1kS" eventType="touchUpInside" id="jii-NA-Oz3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f4S-Ur-6k3" firstAttribute="top" secondItem="zA1-XC-UsW" secondAttribute="bottom" constant="15" id="1Pa-RM-9yy"/>
+                            <constraint firstItem="ISa-xq-29n" firstAttribute="top" secondItem="VFZ-d3-giD" secondAttribute="bottom" id="4F3-m3-Wex"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VFZ-d3-giD" secondAttribute="trailing" id="7d9-qV-SJ5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f4S-Ur-6k3" secondAttribute="trailing" id="Gc3-7l-EBB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ISa-xq-29n" secondAttribute="trailing" id="fBO-QO-eVV"/>
+                            <constraint firstItem="lgA-Pf-0ug" firstAttribute="top" secondItem="Bge-Ai-lD5" secondAttribute="topMargin" id="gUR-qW-HjL"/>
+                            <constraint firstItem="lgA-Pf-0ug" firstAttribute="leading" secondItem="Bge-Ai-lD5" secondAttribute="leading" id="n9L-vU-QnE"/>
+                            <constraint firstItem="VFZ-d3-giD" firstAttribute="top" secondItem="f4S-Ur-6k3" secondAttribute="bottom" id="toM-Bj-y9T"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Touch n Draw" id="ioJ-4G-ghL"/>
+                    <connections>
+                        <outlet property="heightImage" destination="C73-if-Y1W" id="7Rn-Fc-MYx"/>
+                        <outlet property="iv" destination="lgA-Pf-0ug" id="OSe-Ia-uDj"/>
+                        <outlet property="leftPositionImage" destination="n9L-vU-QnE" id="YLs-LS-Fmx"/>
+                        <outlet property="topPositionImage" destination="gUR-qW-HjL" id="5y0-20-Pqw"/>
+                        <outlet property="view" destination="Bge-Ai-lD5" id="akD-Ub-24g"/>
+                        <outlet property="widthImage" destination="vSR-YZ-NsW" id="x0S-bk-l3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjK-Ei-HEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="9a2-fe-WXi">
+                    <connections>
+                        <action selector="pinchImage:" destination="gLR-Hs-1kS" id="q0S-oH-Elu"/>
+                        <outlet property="delegate" destination="gLR-Hs-1kS" id="dPV-xr-Wn4"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="MT0-HW-Vwf">
+                    <connections>
+                        <action selector="rotationImage:" destination="gLR-Hs-1kS" id="C4M-CC-Dcv"/>
+                        <outlet property="delegate" destination="gLR-Hs-1kS" id="3PV-At-CJN"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="6Qg-8b-rwZ">
+                    <connections>
+                        <action selector="dragImage:" destination="gLR-Hs-1kS" id="U32-S7-J6U"/>
+                        <outlet property="delegate" destination="gLR-Hs-1kS" id="M3Y-rC-emF"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="598" y="543"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rGx-dc-KdM">
+            <objects>
+                <tabBarController id="ccK-HS-QWw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="S6C-Zx-c97">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gLR-Hs-1kS" kind="relationship" relationship="viewControllers" id="grF-Ze-zYa"/>
+                        <segue destination="kq0-YX-AFI" kind="relationship" relationship="viewControllers" id="OHx-1O-6Tg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7i-ih-M5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="873"/>
         </scene>
     </scenes>
 </document>
